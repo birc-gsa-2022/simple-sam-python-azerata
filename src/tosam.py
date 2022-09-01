@@ -11,7 +11,8 @@ def main():
 
     for line in args.mas:
         chrom, read_name, read_str, pos = line.split('\t')
-        print(f'{read_name}\t{chrom}\t{pos}\t{len(read_str)}M\t{read_str}')
+        print(read_name.strip(), chrom.strip(), pos.strip(),
+              f'{len(read_str)}M', read_str.strip(), sep='\t', end='\n')
 
 
 if __name__ == '__main__':
